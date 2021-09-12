@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin="">
+    </script>
     <style>
         #checkinMap {
             height: 240px;
@@ -12,14 +20,12 @@
     <title>The Weather Here</title>
 </head>
 <body>
-
 <h1>The Weather Here</h1>
 <div>
-    <a href="/">check in</a> | <a href="/checkins">checkins</a>
+    <a href="/">check in</a> | <a href="/checkins">view checkins</a>
 </div>
 <div id="checkinMap"></div>
 
 <script src="logs.js"></script>
-
 </body>
 </html>

@@ -27,10 +27,11 @@ if ("geolocation" in navigator) {
             document.getElementById("aq_date").textContent = air.lastUpdated;
         } catch (e) {
             console.error(e);
+            air = {value: -1};
             document.getElementById("aq_value").textContent = "NO READING";
         }
 
-        const data = {lat, lon, weather};
+        const data = {lat, lon, weather, air};
         const options = {
             method: "POST",
             headers: {
@@ -38,6 +39,7 @@ if ("geolocation" in navigator) {
             },
             body: JSON.stringify(data)
         };
+
         const db_response = await fetch('/api', options);
         const db_json = await db_response.json();
         console.log(db_json);
